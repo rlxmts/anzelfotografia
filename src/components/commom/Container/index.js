@@ -9,7 +9,7 @@ export const Container = styled.div`
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    padding: 10rem 2rem;
+    padding: 5rem 2rem;
 
     @media screen and (max-with: 768px){
         padding: 5rem 1.5rem;

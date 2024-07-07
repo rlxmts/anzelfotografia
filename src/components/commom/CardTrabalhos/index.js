@@ -40,7 +40,7 @@ const CardTrabalhos = ()=> {
         <CardContainer>
             {Trabalhos.map( trabalho => {
                 return(
-                <div>
+                <div key={trabalho.nome}>
                     <a href="/">
                         <img src={trabalho.imagens[0]} alt={trabalho.nome} />
                         <h3 className="trabalhos-titulo">{trabalho.nome}</h3>
@@ -51,7 +51,7 @@ const CardTrabalhos = ()=> {
             })}
             {Trabalhos.map( trabalho => {
                 return(
-                <div>
+                <div key={trabalho.nome}>
                     <a href="/">
                         <img src={trabalho.imagens[0]} alt={trabalho.nome} />
                         <h3 className="trabalhos-titulo">{trabalho.nome}</h3>

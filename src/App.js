@@ -5,6 +5,7 @@ import Banner from "./components/sections/Banner";
 import Portfolio from "./components/sections/Portfolio";
 import Sobre from "./components/sections/Sobre";
 import Depoimentos from "./components/sections/Depoimentos";
+import Instagram from "./components/sections/Instagram";
 
 const AppContainer = styled.div`
 
@@ -19,6 +20,7 @@ function App() {
         <Portfolio />
         <Sobre />
         <Depoimentos />
+        <Instagram />
         <Rodape />
       </div>
     </AppContainer>

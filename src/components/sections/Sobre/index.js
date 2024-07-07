@@ -8,6 +8,10 @@ const SectionSobre = styled.section`
 .sobre-container{
     flex-direction: row;
 
+    h2{
+        margin: 2rem 0;
+    }
+
     .foto-container{
         width: 100%;
         max-width: 500px;

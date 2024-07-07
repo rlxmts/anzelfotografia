@@ -1,12 +1,56 @@
 import styled from "styled-components";
 import { Container } from "../../commom/Container";
 import Titulo from "../../commom/Titulo";
+import { Texto } from "../../commom/Texto";
 
 const SecaoDepoimentos = styled.section`
 
     .depoimentos-container{
-        gap:10px;
+        gap:2rem;
     }
+
+    .card-container{
+        display:flex;
+        gap:1rem;     
+
+        @media screen and (max-width: 768px){
+            flex-direction: column;
+            gap: 5rem;
+
+            img{
+                width: 200px;
+                height:200px;
+            }
+        }
+        
+        .depoimento-card{
+            width: 100%;
+            max-width: 450px;
+    
+            img{
+                height:250px;
+                width: 250px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin: 0 auto;
+                display:block;
+            }
+
+            span{
+                display: block;
+                text-align: center;
+                margin: 1rem 0;
+                text-transform: uppercase;
+            }
+    
+            p{
+                margin:0 auto;
+                max-width:350px;
+                text-align:center;
+            }
+        }
+    }
+
 `
 
 const depoimentos = [
@@ -33,15 +77,17 @@ const Depoimentos = () => {
         <SecaoDepoimentos>
             <Container className="depoimentos-container">
                 <Titulo titulo='Depoimentos' img='./img/avaliation.svg'/>
-                {depoimentos.map( item => {
-                    return(
-                        <div key={item.nome}>
-                            <img src={item.foto} alt={item.nome} />
-                            <span>{item.nome}</span>
-                            <p>{item.texto}</p>
-                        </div>
-                    )
-                })}
+                <div className="card-container">
+                    {depoimentos.map( item => {
+                        return(
+                            <div className="depoimento-card" key={item.nome}>
+                                <img className="card-img" src={item.foto} alt={item.nome} />
+                                <span>{item.nome}</span>
+                                <Texto>{item.texto}</Texto>
+                            </div>
+                        )
+                    })}
+                </div>
             </Container>
         </SecaoDepoimentos>
     )
