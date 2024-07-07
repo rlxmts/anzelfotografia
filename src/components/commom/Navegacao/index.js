@@ -6,10 +6,8 @@ const Nav = styled.nav`
 
     ul{
         display:flex;
-        flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 1rem;
         gap: 1rem;
 
         a{

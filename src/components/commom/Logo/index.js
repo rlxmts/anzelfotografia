@@ -5,14 +5,12 @@ const Nome = styled.h1`
     font-size: 1rem;
     letter-spacing: 2px;
     color: #87583a;
-    display:flex;
-    flex-wrap: wrap;
-    justify-content:center;
+    color: #000;
 `
 
 const Logo = ()=> {
     return(
-        <Nome><span>Anzel</span>Fotografia</Nome>
+        <Nome>AnzelFotografia</Nome>
     )
 }
 

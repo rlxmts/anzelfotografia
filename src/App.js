@@ -5,12 +5,6 @@ import Banner from "./components/sections/Banner";
 
 const AppContainer = styled.div`
 
-  overflow: hidden;
-  
-  .conteudo{
-    width: 80vw;
-    margin-left:20vw;
-  }
 `
 
 function App() {
