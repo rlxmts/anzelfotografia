@@ -10,10 +10,15 @@ const CardContainer = styled.div`
 
     div{
         width: 100%;
-        max-width: 300px;
+        max-width: 400px;
         margin: 2rem 0;
-        a:hover{
-            color: #8c5038;
+
+
+        a{
+            color: #000;
+            &:hover{
+                color: #8c5038;
+            }
         }
 
         img{

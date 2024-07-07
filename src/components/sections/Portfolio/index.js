@@ -3,7 +3,7 @@ import Titulo from "../../commom/Titulo";
 import CardTrabalhos from "../../commom/CardTrabalhos";
 
 const SectionPortfolio = styled.section`
-    padding: 2rem 1rem;
+    padding: 4rem 1rem;
 `
 
 const Portfolio = ()=> {

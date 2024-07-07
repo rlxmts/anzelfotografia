@@ -5,9 +5,9 @@ export const Trabalhos = [
         nome: 'Daniel e Maria'
     },
     {
-        imagens: ['./img/casal1.jpg','./img/casal0.jpg'],
+        imagens: ['./img/arizona.jpg','./img/casal0.jpg'],
         categoria: 'Ensaio',
-        nome: 'Jorge e Alessandra'
+        nome: 'Valquiria Silva'
     },
     {
         imagens: ['./img/casal2.jpg','./img/casal0.jpg'],
@@ -18,10 +18,5 @@ export const Trabalhos = [
         imagens: ['./img/casamento.jpg','./img/casal0.jpg'],
         categoria: 'Casamento',
         nome: 'Matheus e Conceição'
-    },
-    {
-        imagens: ['./img/aliancas.jpg','./img/casal0.jpg'],
-        categoria: 'Casamento',
-        nome: 'Pablo e Valesca'
     },
 ]

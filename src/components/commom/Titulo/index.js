@@ -7,7 +7,7 @@ const H2 = styled.h2`
     color:#945c46;
     text-transform: uppercase;
     text-align: center;
-    margin: 2rem 1rem 1rem 1rem;
+    margin: 2rem 1rem;
     position: relative;
 
     &::before{
@@ -16,6 +16,8 @@ const H2 = styled.h2`
         width: 40px;
         height: 40px;
         background-image: url(${props => props.img});
+        background-position: center;
+        background-size: 40px;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
@@ -25,12 +27,12 @@ const H2 = styled.h2`
     &::after{
         content: '';
         display: block;
-        width: 40px;
-        height: 2px;
+        width: 30px;
+        height: 4px;
         position: absolute;
         left: 50%;
         transform: translateX(-50%);
-        bottom: -.3rem;
+        bottom: -.7rem;
         background-color: #8c5038;
     }
 `

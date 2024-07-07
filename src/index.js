@@ -41,7 +41,8 @@ const EstiloGLobal = createGlobalStyle`
     text-transform: none;
     font-style: normal;
     text-decoration: none;
-    font-family: "Montserrat";
+    font-family: "Lato";
+    font-weight: 300;
   }
 
   .swiper{
