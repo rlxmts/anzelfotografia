@@ -5,11 +5,33 @@ import styled from "styled-components";
 
 
 const BannerContainer = styled.section`
+    height:100vh;
 
     .item-slide{
-        width:100%;
+    height: 100%;
+    width: 100%;
+    object-fit: cover; 
     }
 `
+
+const imagensBanner = [
+    {
+        alt: 'Casal ao por do sol',
+        url: `${process.env.PUBLIC_URL}/img/aliancas.jpg`
+    },
+    {
+        alt: 'Casal ao por do sol',
+        url: `${process.env.PUBLIC_URL}/img/casal0.jpg`
+    },
+    {
+        alt: 'Casal ao por do sol',
+        url: `${process.env.PUBLIC_URL}/img/casal1.jpg`
+    },
+    {
+        alt: 'Casal ao por do sol',
+        url: `${process.env.PUBLIC_URL}/img/casamento.jpg`
+    }
+]
 
 const Banner = ()=> {
     return(
@@ -29,21 +51,11 @@ const Banner = ()=> {
                 className="mySwiper"
 
             >   
-                <SwiperSlide>
-                    <img className="item-slide" src="https://github.com/rlxmts.png"  alt="matheus"/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img className="item-slide" src="./img/slide1.jpeg"  alt="matheus"/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img className="item-slide" src="https://github.com/rlxmts.png"  alt="matheus"/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img className="item-slide" src="https://github.com/rlxmts.png"  alt="matheus"/>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <img className="item-slide" src="https://github.com/rlxmts.png"  alt="matheus"/>
-                </SwiperSlide>
+                {imagensBanner.map( img => {
+                return(
+                    <SwiperSlide><img className="item-slide" src={img.url} alt={img.alt} /></SwiperSlide>
+                )
+                })}
             </Swiper>
         </BannerContainer>
     )

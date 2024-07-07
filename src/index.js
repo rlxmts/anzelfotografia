@@ -43,6 +43,19 @@ const EstiloGLobal = createGlobalStyle`
     text-decoration: none;
     font-family: "Montserrat";
   }
+
+  .swiper{
+    height:100%;
+  }
+
+  .swiper-slide{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+  }
 `
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
