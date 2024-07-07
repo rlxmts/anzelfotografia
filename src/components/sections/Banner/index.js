@@ -53,7 +53,9 @@ const Banner = ()=> {
             >   
                 {imagensBanner.map( img => {
                 return(
-                    <SwiperSlide><img className="item-slide" src={img.url} alt={img.alt} /></SwiperSlide>
+                    <SwiperSlide key={img.url}>
+                        <img className="item-slide" src={img.url} alt={img.alt} />
+                    </SwiperSlide>
                 )
                 })}
             </Swiper>

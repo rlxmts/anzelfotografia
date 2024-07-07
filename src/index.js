@@ -56,6 +56,13 @@ const EstiloGLobal = createGlobalStyle`
     justify-content: center; 
     align-items: center; 
   }
+
+  .swiper-pagination-bullet{
+    height: 4px;
+    width: 10px;
+    border-radius: 0;
+    background: #DCDCDC;
+  }
 `
 
 const root = ReactDOM.createRoot(document.getElementById('root'));

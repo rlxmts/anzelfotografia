@@ -1,0 +1,62 @@
+import styled from "styled-components";
+import { Trabalhos } from "../Trabalhos";
+
+const CardContainer = styled.div`
+    width:100%;
+    display:flex;
+    gap: 2px;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    div{
+        width: 100%;
+        max-width: 300px;
+        margin: 2rem 0;
+        a:hover{
+            color: #8c5038;
+        }
+
+        img{
+            width:100%;
+        }
+
+        .trabalhos-titulo{
+            font-family: "Montserrat", sans-serif;
+            font-weight: 500;
+            font-size: 1.1rem;
+            text-transform: uppercase;
+            margin: 1rem 0 0 0;
+        }
+    }
+`
+
+const CardTrabalhos = ()=> {
+    return(
+        <CardContainer>
+            {Trabalhos.map( trabalho => {
+                return(
+                <div>
+                    <a href="/">
+                        <img src={trabalho.imagens[0]} alt={trabalho.nome} />
+                        <h3 className="trabalhos-titulo">{trabalho.nome}</h3>
+                        <span>{trabalho.categoria}</span>
+                    </a>
+                </div>
+                )    
+            })}
+            {Trabalhos.map( trabalho => {
+                return(
+                <div>
+                    <a href="/">
+                        <img src={trabalho.imagens[0]} alt={trabalho.nome} />
+                        <h3 className="trabalhos-titulo">{trabalho.nome}</h3>
+                        <span>{trabalho.categoria}</span>
+                    </a>
+                </div>
+                )    
+            })}
+        </CardContainer>
+    )
+}
+
+export default CardTrabalhos;
