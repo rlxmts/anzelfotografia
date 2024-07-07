@@ -14,6 +14,10 @@ const EstiloGLobal = createGlobalStyle`
   scroll-behavior: smooth;
   }
 
+  body{
+    background-color: #efebe6;
+  }
+
   @font-face {
     font-family: "Lato";
     src: url("./fonts/Lato/Lato-Light.ttf") format('truetype');

@@ -7,7 +7,7 @@ const H2 = styled.h2`
     color:#945c46;
     text-transform: uppercase;
     text-align: center;
-    margin: 2rem 1rem;
+    margin-bottom:2rem;
     position: relative;
 
     &::before{
