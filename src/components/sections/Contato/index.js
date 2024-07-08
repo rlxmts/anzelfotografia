@@ -5,7 +5,7 @@ import Formulario from "../../commom/Formulario";
 
 const SecaoContato = styled.section`
     background-color: #dfd7cb;
-    padding-top: 10rem;
+    padding: 10rem 0 5rem 0;
 
     .lista-contato{
         display:flex;

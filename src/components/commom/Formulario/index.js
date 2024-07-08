@@ -48,18 +48,63 @@ const SecaoForm = styled.form`
         font-weight: 600;
           
         }
+
+    .lista-suspensa{
+        width:100%;
+        padding: .5rem;
+        border: none;
+        outline: none;
+        margin-top: 10px;
+        background-color: #d8cfc0f7;
+    }
+
+    .data-hora{
+        display: flex;
+        align-items: end;
+        gap: 10px;
+    }
 `
+
+const opcoes = [
+    'Casamento', 
+    'Pré Wedding', 
+    'Life Style', 
+    'Ensaio Externo Individual',    
+    'Festa Infantil', 
+    'Outros'
+]
 
 const Formulario = ()=> {
     return(
         <SecaoForm>
             <div>
                 <label htmlFor="Nome">Nome:</label>
-                <input id="Nome" name="Nome" placeholder="" required/>
+                <input id="Nome" name="Nome" type="text" required/>
             </div>
             <div>
                 <label htmlFor="Tefelfone">Telefone:</label>
-                <input id="Tefelfone" name="Tefelfone" placeholder="" required />
+                <input id="Tefelfone" name="Tefelfone" type="tel" required />
+            </div>
+            <div className="data-hora">
+                <div>
+                    <label htmlFor="Data">Data do Evento:</label>
+                    <input id="Data" name="Data" type="date" required />
+                </div>
+                <div>
+                    <label htmlFor="Hora">Hora do Evento:</label>
+                    <input id="Hora" name="Hora" type="time" required />
+                </div>
+            </div>
+            <div>
+                <label htmlFor="lista">Evento\Ensaio:</label>
+                <select id="lista" className="lista-suspensa">
+                    <option></option>
+                    {opcoes.map( item =>{
+                        return(
+                            <option>{item}</option>
+                        )
+                    })}
+                </select>
             </div>
             <div>
                 <label htmlFor="mensagem">Mensagem</label>
