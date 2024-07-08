@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 const SectaoInstagram = styled.section`
     padding: 5rem 0;
+    padding-bottom: 0;
 
     .cards-container{
         width:100%;
@@ -17,6 +18,7 @@ const SectaoInstagram = styled.section`
             position: relative;
             aspect-ratio: 1;
             overflow: hidden;
+            cursor:pointer;
             
             img{
                 transition: .6s;
@@ -82,7 +84,7 @@ const Instagram = ()=> {
 
     return(
         <SectaoInstagram>
-            <Titulo titulo='Acompanhe no Instagram' img='./img/share.svg' />
+            <Titulo titulo='@AnzelFotografia' img='./img/share.svg' />
             <div className="cards-container">
                 {dadosApi.map(item => {
                     return(
