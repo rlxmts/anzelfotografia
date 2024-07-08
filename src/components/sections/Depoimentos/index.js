@@ -12,16 +12,6 @@ const SecaoDepoimentos = styled.section`
     .card-container{
         display:flex;
         gap:1rem;     
-
-        @media screen and (max-width: 768px){
-            flex-direction: column;
-            gap: 5rem;
-
-            img{
-                width: 200px;
-                height:200px;
-            }
-        }
         
         .depoimento-card{
             width: 100%;
@@ -45,8 +35,18 @@ const SecaoDepoimentos = styled.section`
     
             p{
                 margin:0 auto;
-                max-width:350px;
+                max-width:300px;
                 text-align:center;
+            }
+        }
+
+        @media screen and (max-width: 768px){
+            flex-direction: column;
+            gap: 5rem;
+
+            img{
+                width: 200px;
+                height:200px;
             }
         }
     }
