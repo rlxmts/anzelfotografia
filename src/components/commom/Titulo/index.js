@@ -35,6 +35,10 @@ const H2 = styled.h2`
         bottom: -.7rem;
         background-color: #8c5038;
     }
+
+    @media screen and (max-width: 768px){
+        font-size: 1.4rem;
+    }
 `
 
 const Titulo = ({titulo, img})=> {
