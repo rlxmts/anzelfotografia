@@ -6,7 +6,7 @@ import Portfolio from "./components/sections/Portfolio";
 import Sobre from "./components/sections/Sobre";
 import Depoimentos from "./components/sections/Depoimentos";
 import Instagram from "./components/sections/Instagram";
-import DadosApi from "./components/commom/DadosApi";
+import { useEffect } from "react";
 
 const AppContainer = styled.div`
 
@@ -22,7 +22,6 @@ function App() {
         <Depoimentos />
         <Instagram />
         <Rodape />
-        <DadosApi />
       </div>
     </AppContainer>
   );
