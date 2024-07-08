@@ -8,7 +8,7 @@ const SectaoInstagram = styled.section`
 const Instagram = ()=> {
     return(
         <SectaoInstagram>
-            <Titulo titulo='Acompanhe no Instagram' />
+            <Titulo titulo='Acompanhe no Instagram' img='./img/share.svg' />
         </SectaoInstagram>
     )
 }
