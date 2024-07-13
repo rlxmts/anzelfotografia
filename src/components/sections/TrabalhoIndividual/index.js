@@ -7,6 +7,16 @@ import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const Galeria = styled.section`
     padding: 5rem 0 0 0;
+
+    img{
+        display:block;
+        width: 100%;
+        cursor: pointer;
+    }
+
+    img:hover{
+        opacity: .9;
+    }
 `
 
 const TrabalhoIndividual = ()=> {
@@ -20,7 +30,9 @@ const TrabalhoIndividual = ()=> {
             <ResponsiveMasonry
                 columnsCountBreakPoints={{350: 2, 750: 3, 900: 4}}
             >
-                <Masonry>
+                <Masonry
+                    gutter="2px"
+                >
                 {cardSelecionado.imagens.map( foto => {
                     return(
                         <img src={`${foto}`} alt="" />
