@@ -3,21 +3,10 @@ import { Trabalhos } from "../../commom/Trabalhos";
 import Titulo from "../../commom/Titulo";
 import styled from "styled-components";
 
+import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
+
 const Galeria = styled.section`
     padding: 5rem 0 0 0;
-`
-
-const ContainerGaleria = styled.div`
-
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    img{
-        width: 100%;
-        max-width: 300px;
-        height: auto;
-        object-fit: cover;
-    }
 `
 
 const TrabalhoIndividual = ()=> {
@@ -28,17 +17,17 @@ const TrabalhoIndividual = ()=> {
     return (
         <Galeria>
             <Titulo img={`${process.env.PUBLIC_URL}/img/coracao.svg`} titulo={cardSelecionado.nome}/>
-            
-            <ContainerGaleria>
-                {cardSelecionado.imagens.map( item => {
-                    console.log(item)
+            <ResponsiveMasonry
+                columnsCountBreakPoints={{350: 2, 750: 3, 900: 4}}
+            >
+                <Masonry>
+                {cardSelecionado.imagens.map( foto => {
                     return(
-                        
-                            <img src={`${item}`} alt="" />
-                    
+                        <img src={`${foto}`} alt="" />
                     )
-                })}    
-            </ContainerGaleria>
+                })}
+                </Masonry>
+            </ResponsiveMasonry>
         </Galeria>
     );
 }
