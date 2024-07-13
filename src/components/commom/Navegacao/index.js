@@ -2,8 +2,6 @@ import styled from "styled-components";
 
 const Nav = styled.nav`
 
-    width:100%;
-
     ul{
         display:flex;
         align-items: center;
@@ -12,7 +10,6 @@ const Nav = styled.nav`
 
         a{
             color: #FFFFFF;
-            color: #87583a;
             display: block;
             text-transform: uppercase;
             font-size: .7rem;
@@ -20,6 +17,17 @@ const Nav = styled.nav`
             width:100%;
             font-weight: 900;
             letter-spacing: 2px;
+            transition: .6s;
+
+            &:hover{
+                color: #945c46;
+            }
+        }        
+    }
+    
+    @media screen and (max-width: 768px){
+        ul a{
+            font-size: .6rem;
         }
     }
 `

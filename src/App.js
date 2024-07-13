@@ -14,8 +14,7 @@ const AppContainer = styled.div`
 function App() {
   return (
     <AppContainer>
-      <Cabecalho />
-      <div className="conteudo">
+        <Cabecalho />
         <Banner />
         <Portfolio />
         <Sobre />
@@ -23,7 +22,6 @@ function App() {
         <Instagram />
         <Contato />
         <Rodape />
-      </div>
     </AppContainer>
   );
 }

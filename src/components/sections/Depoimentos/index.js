@@ -18,8 +18,8 @@ const SecaoDepoimentos = styled.section`
             max-width: 450px;
     
             img{
-                height:250px;
-                width: 250px;
+                height:200px;
+                width: 200px;
                 border-radius: 50%;
                 object-fit: cover;
                 margin: 0 auto;

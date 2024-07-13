@@ -16,7 +16,7 @@ const SecaoForm = styled.form`
     label, input, textarea{
         display:block;
         width:100%;
-        background-color:#dfd7cb;
+        background-color:#fff;
         border: none;
         }
         
@@ -55,7 +55,7 @@ const SecaoForm = styled.form`
         border: none;
         outline: none;
         margin-top: 10px;
-        background-color: #d8cfc0f7;
+        background-color: #dcdcdc4a;
     }
 
     .data-hora{
@@ -88,20 +88,19 @@ const Formulario = ()=> {
             <div className="data-hora">
                 <div>
                     <label htmlFor="Data">Data do Evento:</label>
-                    <input id="Data" name="Data" type="date" required />
+                    <input id="Data" name="Data" type="date"/>
                 </div>
                 <div>
                     <label htmlFor="Hora">Hora do Evento:</label>
-                    <input id="Hora" name="Hora" type="time" required />
+                    <input id="Hora" name="Hora" type="time"/>
                 </div>
             </div>
             <div>
                 <label htmlFor="lista">Evento\Ensaio:</label>
                 <select id="lista" className="lista-suspensa">
-                    <option></option>
                     {opcoes.map( item =>{
                         return(
-                            <option>{item}</option>
+                            <option key={item}>{item}</option>
                         )
                     })}
                 </select>

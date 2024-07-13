@@ -38,6 +38,13 @@ const H2 = styled.h2`
 
     @media screen and (max-width: 768px){
         font-size: 1.4rem;
+
+        &::before{
+            width:30px;
+            height: 30px;
+            background-size: 30px;
+            top: -2rem;
+        }
     }
 `
 

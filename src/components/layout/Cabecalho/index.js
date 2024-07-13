@@ -4,14 +4,18 @@ import Navegacao from "../../commom/Navegacao";
 
 const Header = styled.header`
     display:flex;
-    flex-direction:column;
     align-items: center;
-    padding: 1rem 1rem 1rem 1rem;
-    gap:.3rem;
+    justify-content: space-around;
+    padding:  1rem;
+    gap:3rem;
     z-index:999;
     width:100%;
-    background-color: #e6e3da;
-    box-shadow: 0px 0px 7px #00000070;
+    background-color: #000;
+
+    @media screen and (max-width: 768px){
+        flex-direction: column;
+        gap: .2rem;
+    }
 `
 
 const Cabecalho = () => {

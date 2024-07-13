@@ -49,17 +49,6 @@ const CardTrabalhos = ()=> {
                 </div>
                 )    
             })}
-            {Trabalhos.map( trabalho => {
-                return(
-                <div key={trabalho.nome}>
-                    <a href="/">
-                        <img src={trabalho.imagens[0]} alt={trabalho.nome} />
-                        <h3 className="trabalhos-titulo">{trabalho.nome}</h3>
-                        <span>{trabalho.categoria}</span>
-                    </a>
-                </div>
-                )    
-            })}
         </CardContainer>
     )
 }

@@ -62,11 +62,18 @@ const EstiloGLobal = createGlobalStyle`
     align-items: center; 
   }
 
-  .swiper-pagination-bullet{
-    height: 4px;
-    width: 10px;
-    border-radius: 0;
+  .swiper-button-prev, .swiper-button-next{
+    display:none;
+  }
+
+  .swiper-pagination-bullet-active{
     background: #DCDCDC;
+  }
+
+  @media screen and (max-width: 600px){
+    .swiper-slide{
+      height: 90vh;
+    }
   }
 `
 

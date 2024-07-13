@@ -10,7 +10,7 @@ const SectaoInstagram = styled.section`
     .cards-container{
         width:100%;
         display:grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-rows: 1fr 1fr;
         
         .card{
@@ -49,12 +49,18 @@ const SectaoInstagram = styled.section`
             background-color: transparent;
         }
 
+        
         @media screen and (max-width: 768px){
-            grid-template-columns: 1fr 1fr;
+            .card:nth-last-child(1){
+                display:none;
+            }
+            grid-template-columns: 1fr 1fr 1fr;
 
             .card::after{
                 display:none;
             }
+
+            .card:nth-last
         }
     }
 
@@ -72,7 +78,7 @@ const Instagram = ()=> {
               const api = await fetch(`https://graph.instagram.com//me/media?fields=${dados}&access_token=${Token}`);
               const apiConvertida = await api.json();
               const imagens = apiConvertida.data.filter( tipo => tipo.media_type === "IMAGE");
-              const ultimosPost = imagens.slice(0,8)
+              const ultimosPost = imagens.slice(0,10)
               setDadosApi(ultimosPost);              
             }catch(error){
               console.log( error);

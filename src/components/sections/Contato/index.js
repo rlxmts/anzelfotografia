@@ -4,7 +4,7 @@ import Titulo from "../../commom/Titulo";
 import Formulario from "../../commom/Formulario";
 
 const SecaoContato = styled.section`
-    background-color: #dfd7cb;
+    background-color: #fff;
     padding: 10rem 0 5rem 0;
 
     .lista-contato{
