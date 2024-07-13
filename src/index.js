@@ -3,11 +3,16 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import { createGlobalStyle } from 'styled-components';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
+import Cabecalho from "./components/layout/Cabecalho";
+import Rodape from "./components/layout/Rodape";
+import Instagram from "./components/sections/Instagram";
+import Contato from "./components/sections/Contato";
 
 import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
+import TrabalhoIndividual from './components/sections/TrabalhoIndividual';
 
 const EstiloGLobal = createGlobalStyle`
 
@@ -21,19 +26,19 @@ const EstiloGLobal = createGlobalStyle`
 
   @font-face {
     font-family: "Lato";
-    src: url("./fonts/Lato/Lato-Light.ttf") format('truetype');
+    src: url(${process.env.PUBLIC_URL}/fonts/Lato/Lato-Light.ttf) format('truetype');
     font-weight: 300;
   }
 
   @font-face {
     font-family: "Cinzel";
-    src: url('./fonts/Cinzel/Cinzel-Regular.ttf') format('truetype');
+    src: url(${process.env.PUBLIC_URL}/fonts/Cinzel/Cinzel-Regular.ttf) format('truetype');
     font-weight: 400;
   }
 
   @font-face {
     font-family: "Montserrat";
-    src: url('./fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    src: url(${process.env.PUBLIC_URL}/fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format('truetype');
     font-weight: 100 300;
   }
 
@@ -83,10 +88,15 @@ root.render(
   <React.StrictMode>
     <EstiloGLobal />
 
-    <BrowserRouter>
+    <BrowserRouter>    
+      <Cabecalho />
       <Routes>
         <Route path="/" element={<App />} />
+        <Route path="/portfolio/:id" element={<TrabalhoIndividual/>} />
       </Routes>
+      <Instagram />
+      <Contato />
+      <Rodape />
     </BrowserRouter>
   </React.StrictMode>
 );

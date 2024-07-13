@@ -96,6 +96,10 @@ const Formulario = ()=> {
                 </div>
             </div>
             <div>
+                    <label htmlFor="Endereco">Endereço do Evento:</label>
+                    <input id="Endereco" name="Endereco" type="text"/>
+                </div>
+            <div>
                 <label htmlFor="lista">Evento\Ensaio:</label>
                 <select id="lista" className="lista-suspensa">
                     {opcoes.map( item =>{

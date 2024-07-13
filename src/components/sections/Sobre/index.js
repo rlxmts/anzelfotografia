@@ -25,7 +25,7 @@ const SectionSobre = styled.section`
 
 const Sobre = ()=> {
     return(
-        <SectionSobre>
+        <SectionSobre id="sobre">
             <Container className="sobre-container">
                 <div className="foto-container">
                     <img src="./img/alessandra.webp" alt=""/>

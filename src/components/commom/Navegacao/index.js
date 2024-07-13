@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const Nav = styled.nav`
@@ -8,7 +9,7 @@ const Nav = styled.nav`
         justify-content: center;
         gap: 1rem;
 
-        a{
+        a, .link{
             color: #FFFFFF;
             display: block;
             text-transform: uppercase;
@@ -36,10 +37,10 @@ const Navegacao = () => {
     return(
         <Nav>
             <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/">Portfólio</a></li>
-                <li><a href="/">Sobre</a></li>
-                <li><a href="/">Contato</a></li>
+                <li><Link to='/' className="link">Home</Link></li>
+                <li><a href="/#portfolio">Portfólio</a></li>
+                <li><a href="/#sobre">Sobre</a></li>
+                <li><a href="/#contato">Contato</a></li>
             </ul>
         </Nav>
     )

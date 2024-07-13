@@ -9,7 +9,7 @@ const SectionPortfolio = styled.section`
 
 const Portfolio = ()=> {
     return(
-        <SectionPortfolio>
+        <SectionPortfolio id="portfolio">
             <Titulo titulo='Portfólio' img={'img/mountain.svg'} />
             <CardTrabalhos />
         </SectionPortfolio>

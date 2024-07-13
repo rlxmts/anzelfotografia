@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { Trabalhos } from "../Trabalhos";
+import { Link } from "react-router-dom";
 
 const CardContainer = styled.div`
     width:100%;
@@ -42,7 +43,9 @@ const CardTrabalhos = ()=> {
                 return(
                 <div key={trabalho.nome}>
                     <a href="/">
-                        <img src={trabalho.imagens[0]} alt={trabalho.nome} />
+                        <Link to={`/portfolio/${trabalho.id}`}>
+                            <img src={trabalho.imagens[0]} alt={trabalho.nome} />
+                        </Link>
                         <h3 className="trabalhos-titulo">{trabalho.nome}</h3>
                         <span>{trabalho.categoria}</span>
                     </a>

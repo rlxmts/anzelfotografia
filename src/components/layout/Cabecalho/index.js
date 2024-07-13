@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import  Logo  from "../../commom/Logo";
 import Navegacao from "../../commom/Navegacao";
+import { Link } from "react-router-dom";
 
 const Header = styled.header`
     display:flex;
@@ -21,7 +22,9 @@ const Header = styled.header`
 const Cabecalho = () => {
     return(
         <Header>
-            <Logo />
+            <Link to='/'>
+                <Logo />
+            </Link>
             <div className="divisor"></div>
             <Navegacao />
         </Header>

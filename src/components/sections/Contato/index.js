@@ -40,7 +40,7 @@ const SecaoContato = styled.section`
 
 const Contato = ()=> {
     return(
-        <SecaoContato>
+        <SecaoContato id="contato">
             <Container>
                 <div>
                     <Titulo titulo="Contato" img="./img/email.svg" />
