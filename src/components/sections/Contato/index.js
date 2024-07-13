@@ -29,6 +29,9 @@ const SecaoContato = styled.section`
         }
 
         @media screen and (max-width: 768px){
+
+            padding: 5rem 0;
+
             .lista-contato{
                 li:nth-child(2) a{
                     border: none;

@@ -13,7 +13,8 @@ const CardContainer = styled.div`
         width: 100%;
         max-width: 400px;
         margin: 2rem 0;
-
+        transition: .6s;
+        overflow: hidden;
 
         a{
             color: #000;
@@ -23,8 +24,13 @@ const CardContainer = styled.div`
         }
 
         img{
+            transition: .6s;
             width:100%;
         }
+
+        img:hover{
+            transform: scale(1.1);
+        }        
 
         .trabalhos-titulo{
             font-family: "Montserrat", sans-serif;
@@ -33,6 +39,10 @@ const CardContainer = styled.div`
             text-transform: uppercase;
             margin: 1rem 0 0 0;
         }
+    }
+
+    div:hover{
+        opacity: .8;
     }
 `
 

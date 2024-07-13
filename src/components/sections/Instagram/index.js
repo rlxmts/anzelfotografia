@@ -91,21 +91,22 @@ const Instagram = ()=> {
     return(
         <SectaoInstagram>
             <Titulo titulo='@AnzelFotografia' img='./img/share.svg' />
-            <div className="cards-container">
-                {dadosApi.map(item => {
-                    return(
-                        <div className="card" key={item.id}>
-                            <a 
-                                href="https://www.instagram.com/anzelfotografia/"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                            >
-                                <img src={item.media_url} alt="Externa do instagram"/>
-                            </a>
-                        </div>
-                    )
-                })}
-            </div>
+            <a 
+                href="https://www.instagram.com/anzelfotografia/"
+                target="_blank"
+                rel="noopener noreferrer"
+            >
+                <div className="cards-container">
+                    {dadosApi.map(item => {
+                        return(
+                            <div className="card" key={item.id}>
+                                
+                                    <img src={item.media_url} alt="Externa do instagram"/>
+                            </div>
+                        )
+                    })}
+                </div>
+            </a>
         </SectaoInstagram>
     )
 }
