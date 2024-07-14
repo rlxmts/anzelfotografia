@@ -68,8 +68,9 @@ const EstiloGLobal = createGlobalStyle`
     align-items: center; 
   }
 
-  .swiper-button-prev, .swiper-button-next{
-    display:none;
+  .swiper-button-prev::after , .swiper-button-next::after{
+    font-size: 15px;
+    color: #DCDCDC;
   }
 
   .swiper-pagination-bullet-active{

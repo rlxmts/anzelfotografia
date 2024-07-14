@@ -15,13 +15,16 @@ const CardContainer = styled.div`
         margin: 2rem 0;
         transition: .6s;
         overflow: hidden;
-
-        a{
+        
+        
+        span,h3{
             color: #000;
             &:hover{
                 color: #8c5038;
             }
-        }
+        }   
+        
+        
 
         img{
             transition: .6s;
@@ -52,13 +55,11 @@ const CardTrabalhos = ()=> {
             {Trabalhos.map( trabalho => {
                 return(
                 <div key={trabalho.nome}>
-                    <a href="/">
                         <Link to={`/portfolio/${trabalho.id}`}>
                             <img src={trabalho.imagens[0]} alt={trabalho.nome} />
-                        </Link>
                         <h3 className="trabalhos-titulo">{trabalho.nome}</h3>
                         <span>{trabalho.categoria}</span>
-                    </a>
+                        </Link>
                 </div>
                 )    
             })}

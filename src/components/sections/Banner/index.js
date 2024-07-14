@@ -26,7 +26,7 @@ const imagensBanner = [
     './img/trabalhos/Danielle-Wellerson-casamento/5.jpg',
     './img/trabalhos/Fernanda-Henrique-externa/13.jpg',           
     './img/trabalhos/Hevellyn-Hiago-prewedding/5.jpg',           
-    './img/trabalhos/Marlon-Thayane-prewedding/12.jpg',           
+    './img/trabalhos/Marlon-Thayane-prewedding/2.jpg',           
     ]
 
 const Banner = ()=> {
@@ -37,10 +37,12 @@ const Banner = ()=> {
                 watchSlidesProgress={true} 
                 slidesPerView={3} 
                 className="mySwiper slide-desktop"
+                navigation={true}
+                modules={[Pagination, Navigation]}
             >
                 {imagensBanner.map( item => {
                     return(
-                        <SwiperSlide key={item}><img src={item} alt="Foto de trabalhos da AnzelFotografia."></img></SwiperSlide>
+                        <SwiperSlide key={item}><img className="imagem" src={item} alt="Foto de trabalhos da AnzelFotografia."></img></SwiperSlide>
                     )
                 })}
             </Swiper>

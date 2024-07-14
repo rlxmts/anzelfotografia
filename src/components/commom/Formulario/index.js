@@ -4,6 +4,7 @@ import { Botao } from "../Botao";
 const SecaoForm = styled.form`
     display:flex;
     flex-direction: column;
+    align-items: center;
     width: 100%;
     max-width: 600px;
     border-radius: 20px;

@@ -5,6 +5,7 @@ import CardTrabalhos from "../../commom/CardTrabalhos";
 const SectionPortfolio = styled.section`
     padding: 4rem 1rem;
     background-color: #efebe6;
+    border-bottom: 1px solid #DCDCDC;
 `
 
 const Portfolio = ()=> {
