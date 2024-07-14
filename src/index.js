@@ -13,6 +13,7 @@ import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import TrabalhoIndividual from './components/sections/TrabalhoIndividual';
+import BotaoSubir from './components/commom/BotaoSubir';
 
 const EstiloGLobal = createGlobalStyle`
 
@@ -77,6 +78,10 @@ const EstiloGLobal = createGlobalStyle`
     background: #DCDCDC;
   }
 
+  .bt-ativo{
+    transform: translate(0);
+  }
+
   @media screen and (max-width: 600px){
     .swiper-slide{
       height: 90vh;
@@ -98,6 +103,7 @@ root.render(
       <Instagram />
       <Contato />
       <Rodape />
+      <BotaoSubir />
     </BrowserRouter>
   </React.StrictMode>
 );
