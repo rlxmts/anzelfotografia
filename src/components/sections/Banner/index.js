@@ -16,6 +16,15 @@ const BannerContainer = styled.section`
         
         .slide-mobile{
             display: flex;
+            height: auto;
+
+            div{
+                height: auto;
+            }
+
+            img{
+                width: 100%;
+            }
         }
     }
 `

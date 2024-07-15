@@ -32,6 +32,10 @@ const SecaoContato = styled.section`
             padding: 5rem 0;
 
             .lista-contato{
+
+                flex-direction: column;
+                width:100%;
+
                 li:nth-child(2) a{
                     border: none;
                     padding:0;
@@ -48,7 +52,6 @@ const Contato = ()=> {
                     <Titulo titulo="Contato" img="./img/email.svg" />
                 </div>
                 <Formulario />
-                <div>
                     <ul className="lista-contato">
                         <li>
                             <a href="tel:+552197900-6557" 
@@ -75,7 +78,6 @@ const Contato = ()=> {
                             </a>
                         </li>
                     </ul>
-                </div>
             </Container>
         </SecaoContato>
     )
