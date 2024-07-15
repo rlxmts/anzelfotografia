@@ -2,8 +2,6 @@ import styled from "styled-components";
 import { Container } from "../../commom/Container";
 import Titulo from "../../commom/Titulo";
 import { Texto } from "../../commom/Texto";
-import Aos from "aos";
-import { useEffect } from "react";
 
 const SecaoDepoimentos = styled.section`
 
@@ -76,12 +74,6 @@ const depoimentos = [
 
 const Depoimentos = () => {
 
-    useEffect( ()=>{
-        Aos.init({
-            duration:1000,
-            once: true
-        })
-    },[])
 
     return(
 

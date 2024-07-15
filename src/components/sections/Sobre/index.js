@@ -24,7 +24,7 @@ const SectionSobre = styled.section`
 `
 
 const Sobre = ()=> {
-
+        
     return(
         <SectionSobre id="sobre">
             <Container className="sobre-container">

@@ -97,10 +97,10 @@ const Formulario = ()=> {
                     <input id="Hora" name="Hora" type="time"/>
                 </div>
             </div>
-            <div>
-                    <label htmlFor="Endereco">Endereço do Evento:</label>
-                    <input id="Endereco" name="Endereco" type="text"/>
-                </div>
+            <div data-aos="fade-up">
+                <label htmlFor="Endereco">Endereço do Evento:</label>
+                <input id="Endereco" name="Endereco" type="text"/>
+            </div>
             <div  data-aos="fade-up">
                 <label htmlFor="lista">Evento\Ensaio:</label>
                 <select id="lista" className="lista-suspensa">

@@ -24,29 +24,6 @@ const Galeria = styled.section`
         opacity: .9;
     }
 
-    .popup{
-        position: fixed;
-        z-index: 9999;
-        background-color:#000000c9;
-        top: 0;
-        left:0;
-        width: 100vw;
-        height: 100vh;
-        display: none;
-        place-items: center;
-        transform: translateY(200px);
-        opacity:0;
-        transition: 1s;
-    }
-    
-    .popup-bt-fechar{
-        color: #FFF;
-        cursor: pointer;
-        position: fixed;
-        right: 30px;
-        top: 30px;
-    }
-
     .abrir{
         display:grid;
         opacity: 1;
@@ -72,6 +49,50 @@ const VejaMais = styled.div`
     }
 `
 
+const PopUp = styled.div`
+
+    position: fixed;
+    z-index: 9999;
+    background-color:#000000c9;
+    top: 0;
+    left:0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    place-items: center;
+    transform: translateY(200px);
+    opacity:0;
+    transition: 1s;
+    
+    .popup-bt-fechar{
+        color: transparent;
+        cursor: pointer;
+        position: fixed;
+        right: 30px;
+        top: 30px;
+        
+        &::after{
+            content: '';
+            display:block;
+            width: 30px;
+            height:30px;
+            position: absolute;
+            right:30px;
+            top: 30px;
+            font-size: 2rem;
+            background-image: url('${process.env.PUBLIC_URL}/img/close.svg');
+            background-position: center;
+            background-size: 30px;
+        }
+    }
+
+    @media screen and (max-width: 768px){
+        .popup-bt-fechar::after{
+            right: -20px;
+        }
+    }
+`
+
 const TrabalhoIndividual = ()=> {
 
     const parametro = useParams();
@@ -92,12 +113,12 @@ const TrabalhoIndividual = ()=> {
     return (
         <Galeria>
             <Titulo img={`${process.env.PUBLIC_URL}/img/coracao.svg`} titulo={cardSelecionado.nome}/>
-            <div className={classNames('popup', abrir)}>
+            <PopUp className={classNames('popup', abrir)}>
                 <span onClick={fecharGaleria} className="popup-bt-fechar">Fechar galeria</span>
                 <div className="popup-galeria">
                     <img src={imagemClicada} alt="imagem carregada"/>
                 </div>
-            </div>
+            </PopUp>
             <ResponsiveMasonry
                 columnsCountBreakPoints={{350: 2, 750: 3, 900: 3}}
             >
