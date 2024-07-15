@@ -14,6 +14,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/effect-fade';
 import TrabalhoIndividual from './components/sections/TrabalhoIndividual';
 import BotaoSubir from './components/commom/BotaoSubir';
+import BtWhatsApp from './components/commom/BtWhatsapp';
 
 const EstiloGLobal = createGlobalStyle`
 
@@ -104,6 +105,7 @@ root.render(
       <Contato />
       <Rodape />
       <BotaoSubir />
+      <BtWhatsApp />
     </BrowserRouter>
   </React.StrictMode>
 );

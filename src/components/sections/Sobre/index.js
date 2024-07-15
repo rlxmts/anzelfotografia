@@ -32,7 +32,9 @@ const Sobre = ()=> {
                 </div>
                 <div>
                     <Titulo img='./img/coracao.svg' titulo="Alessandra Anzelman"/>
-                    <Texto>Olá! Meu nome é Alessandra Anzelman e sou uma fotógrafa apaixonada pelo que faço. Descobri a fotografia durante meus estudos e, desde então, recebi todo o apoio de amigos e familiares para seguir essa carreira. Hoje, sei que não trabalho apenas com fotografias, mas com histórias, memórias, emoções e sentimentos, que procuro retratar através das minhas lentes. Dessa forma, conto a vida de maneira mais emocionante e tocante.</Texto>
+                    <Texto>
+                    Oi! Eu me chamo Alessandra. Sou do Rio de Janeiro. A paixão pela fotografia começou bem cedo na minha vida. Sempre enfatizei a importância da fotografia na eternização de momentos, pessoas e emoções. Ao longo do tempo, fiz da fotografia um hobby, mergulhei nesse mundo e ela, naturalmente, se tornou profissão. Desde então, sigo eternizando momentos.
+                    </Texto>
                 </div>
             </Container>
         </SectionSobre>        

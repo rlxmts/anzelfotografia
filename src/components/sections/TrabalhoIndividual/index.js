@@ -60,6 +60,18 @@ const Galeria = styled.section`
     }
 `
 
+const VejaMais = styled.div`
+    padding-top: 5rem;
+
+    h2{
+        margin: 5rem 0 0 0;
+    }
+
+    @media screen and (max-width: 768px){
+        padding: 5rem 1rem 0 1rem;
+    }
+`
+
 const TrabalhoIndividual = ()=> {
 
     const parametro = useParams();
@@ -99,8 +111,10 @@ const TrabalhoIndividual = ()=> {
                 })}
                 </Masonry>
             </ResponsiveMasonry>
-            <Titulo titulo='Veja Mais' />
-            <CardTrabalhos />
+            <VejaMais className="veja-mais">
+                <Titulo titulo='Veja Mais' img={ `${process.env.PUBLIC_URL}/img/galary.svg` } />
+                <CardTrabalhos />
+            </VejaMais>
         </Galeria>
     );
 }

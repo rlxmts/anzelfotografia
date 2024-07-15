@@ -31,7 +31,13 @@ const Rodape = ()=> {
             <span> &copy; Copyright - todos os direitos reservados. </span>
             <div className="creditos">
                 <span>Feito por:</span>
-                <a href="https://horbiti.vercel.app" target="_blank" rel="noopener noreferrer"><img alt="Logotipo da Horbiti" src="./img/horbiti.png"></img></a>
+                <a 
+                    href="https://horbiti.vercel.app" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                >
+                    <img alt="Logotipo da Horbiti" src={`${process.env.PUBLIC_URL}/img/horbiti.png`} />
+                </a>
             </div>
         </Footer>
     )

@@ -14,7 +14,6 @@ const SecaoContato = styled.section`
 
         a{
             color: #000;
-            font-weight: 900;
         }
         
         }
