@@ -49,8 +49,9 @@ const H2 = styled.h2`
 `
 
 const Titulo = ({titulo, img})=> {
+
     return(
-            <H2 img={img}>{titulo}</H2>
+            <H2  data-aos="fade-up" img={img}>{titulo}</H2>
     )
 }
 

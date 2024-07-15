@@ -76,17 +76,18 @@ const opcoes = [
 ]
 
 const Formulario = ()=> {
+
     return(
         <SecaoForm>
-            <div>
+            <div  data-aos="fade-up">
                 <label htmlFor="Nome">Nome:</label>
                 <input id="Nome" name="Nome" type="text" required/>
             </div>
-            <div>
+            <div  data-aos="fade-up">
                 <label htmlFor="Tefelfone">Telefone:</label>
                 <input id="Tefelfone" name="Tefelfone" type="tel" required />
             </div>
-            <div className="data-hora">
+            <div  data-aos="fade-up" className="data-hora">
                 <div>
                     <label htmlFor="Data">Data do Evento:</label>
                     <input id="Data" name="Data" type="date"/>
@@ -100,7 +101,7 @@ const Formulario = ()=> {
                     <label htmlFor="Endereco">Endereço do Evento:</label>
                     <input id="Endereco" name="Endereco" type="text"/>
                 </div>
-            <div>
+            <div  data-aos="fade-up">
                 <label htmlFor="lista">Evento\Ensaio:</label>
                 <select id="lista" className="lista-suspensa">
                     {opcoes.map( item =>{
@@ -110,7 +111,7 @@ const Formulario = ()=> {
                     })}
                 </select>
             </div>
-            <div>
+            <div  data-aos="fade-up">
                 <label htmlFor="mensagem">Mensagem</label>
                 <textarea rows={4} id="mensagem" name="Mensagem" placeholder=""/>
             </div>

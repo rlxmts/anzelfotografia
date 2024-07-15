@@ -2,6 +2,8 @@ import styled from "styled-components";
 import { Container } from "../../commom/Container";
 import Titulo from "../../commom/Titulo";
 import { Texto } from "../../commom/Texto";
+import Aos from "aos";
+import { useEffect } from "react";
 
 const SecaoDepoimentos = styled.section`
 
@@ -62,28 +64,37 @@ const depoimentos = [
     {
         nome: 'Thainá',
         foto: './img/thaina.jpg',
-        texto: 'A Alessandra arrebenta demais! Tivemos um dia incrivel com um ensaio super leve e discontraído.'
+        texto: 'Não canso de dizer que amei e que fiz a escolha certa, ao escolher você para uma ocasião tão especial.'
     },
     {
         nome: 'Marcelle',
         foto: './img/marcele.jpg',
-        texto: 'Melhor fotógrafa do planeta! Já fiz 2 ensaios com ela e pretendo fazer sempre que der.'
+        texto: 'A Alessandra arrebenta demais! Tivemos um dia incrivel com um ensaio super leve e discontraído.'
     }
 ]
 
 
 const Depoimentos = () => {
+
+    useEffect( ()=>{
+        Aos.init({
+            duration:1000,
+            once: true
+        })
+    },[])
+
     return(
+
         <SecaoDepoimentos>
             <Container className="depoimentos-container">
                 <Titulo titulo='Depoimentos' img='./img/avaliation.svg'/>
-                <div className="card-container">
+                <div className="card-container"  data-aos="fade-up">
                     {depoimentos.map( item => {
                         return(
                             <div className="depoimento-card" key={item.nome}>
                                 <img className="card-img" src={item.foto} alt={item.nome} />
                                 <span>{item.nome}</span>
-                                <Texto>{item.texto}</Texto>
+                                <Texto>"{item.texto}"</Texto>
                             </div>
                         )
                     })}

@@ -59,7 +59,7 @@ const CardTrabalhos = ()=> {
         <CardContainer>
             {Trabalhos.map( trabalho => {
                 return(
-                <div onClick={subirAoTopo} key={trabalho.nome}>
+                <div data-aos="fade-up" onClick={subirAoTopo} key={trabalho.nome}>
                         <Link to={`/portfolio/${trabalho.id}`}>
                             <img src={trabalho.imagens[0]} alt={trabalho.nome} />
                         <h3 className="trabalhos-titulo">{trabalho.nome}</h3>

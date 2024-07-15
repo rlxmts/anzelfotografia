@@ -45,15 +45,16 @@ const SecaoContato = styled.section`
 `
 
 const Contato = ()=> {
+
     return(
         <SecaoContato id="contato">
             <Container>
                 <div>
                     <Titulo titulo="Contato" img="./img/email.svg" />
                 </div>
-                <Formulario />
+                <Formulario/>
                     <ul className="lista-contato">
-                        <li>
+                        <li  data-aos="fade-up">
                             <a href="tel:+552197900-6557" 
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -61,7 +62,7 @@ const Contato = ()=> {
                                 (21)97900-6557
                             </a>
                         </li>
-                        <li>
+                        <li  data-aos="fade-up">
                             <a href="mailto:contato@anzelfotografia.com.br" 
                                 target="_blank"
                                 rel="noopener noreferrer"
@@ -69,7 +70,7 @@ const Contato = ()=> {
                                 contato@anzelfotografia.com.br
                             </a>
                         </li>
-                        <li>
+                        <li  data-aos="fade-up">
                             <a href="https://instagram.com/anzelfotografia" 
                                 target="_blank"
                                 rel="noopener noreferrer"

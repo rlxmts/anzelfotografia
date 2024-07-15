@@ -24,15 +24,16 @@ const SectionSobre = styled.section`
 `
 
 const Sobre = ()=> {
+
     return(
         <SectionSobre id="sobre">
             <Container className="sobre-container">
                 <div className="foto-container">
-                    <img src="./img/alessandra.webp" alt=""/>
+                    <img  data-aos="fade-up" src="./img/alessandra.webp" alt=""/>
                 </div>
                 <div>
                     <Titulo img='./img/coracao.svg' titulo="Alessandra Anzelman"/>
-                    <Texto>
+                    <Texto data-aos="fade-up">
                     Oi! Eu me chamo Alessandra. Sou do Rio de Janeiro. A paixão pela fotografia começou bem cedo na minha vida. Sempre enfatizei a importância da fotografia na eternização de momentos, pessoas e emoções. Ao longo do tempo, fiz da fotografia um hobby, mergulhei nesse mundo e ela, naturalmente, se tornou profissão. Desde então, sigo eternizando momentos.
                     </Texto>
                 </div>
